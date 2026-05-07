@@ -1,0 +1,24 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const currentPath = Astro.url.pathname;
+const cleanPath = lang === 'id' ? currentPath : currentPath.replace(`/${lang}`, '') || '/';
+---
+
+<div class="flex items-center gap-2 ml-4 pl-4 border-l border-slate-200">
+  {Object.entries(languages).map(([code, label]) => (
+    <a
+      href={code === 'id' ? cleanPath : `/${code}${cleanPath === '/' ? '' : cleanPath}`}
+      class={`text-xs font-bold px-2 py-1 rounded transition-colors ${
+        lang === code
+          ? 'bg-blue-600 text-white'
+          : 'text-slate-500 hover:text-blue-600 hover:bg-blue-50'
+      }`}
+    >
+      {code.toUpperCase()}
+    </a>
+  ))}
+</div>
