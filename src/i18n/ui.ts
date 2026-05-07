@@ -1,3 +1,5 @@
+import { navbarTranslations } from '@/components/layout/navbar/navbar';
+
 export const languages = {
   id: 'Bahasa Indonesia',
   en: 'English',
@@ -7,11 +9,7 @@ export const defaultLang = 'id';
 
 export const ui = {
   id: {
-    'nav.home': 'Beranda',
-    'nav.articles': 'Artikel',
-    'nav.services': 'Layanan',
-    'nav.contact': 'Kontak',
-    'nav.booking': 'Booking Sekarang',
+    ...navbarTranslations.id,
     'footer.description': 'Perawatan kesehatan terbaik untuk hewan peliharaan kesayangan Anda. Dokter berpengalaman, fasilitas modern.',
     'footer.services': 'Layanan',
     'footer.contact': 'Kontak',
@@ -66,11 +64,7 @@ export const ui = {
     'articles.no_content': 'Konten artikel tidak tersedia.',
   },
   en: {
-    'nav.home': 'Home',
-    'nav.articles': 'Articles',
-    'nav.services': 'Services',
-    'nav.contact': 'Contact',
-    'nav.booking': 'Book Now',
+    ...navbarTranslations.en,
     'footer.description': 'Best healthcare for your beloved pets. Experienced doctors, modern facilities.',
     'footer.services': 'Services',
     'footer.contact': 'Contact',

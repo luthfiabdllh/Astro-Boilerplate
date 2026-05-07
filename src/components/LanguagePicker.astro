@@ -8,14 +8,14 @@ const currentPath = Astro.url.pathname;
 const cleanPath = lang === 'id' ? currentPath : currentPath.replace(`/${lang}`, '') || '/';
 ---
 
-<div class="flex items-center gap-2 ml-4 pl-4 border-l border-slate-200">
+<div class="flex items-center gap-2">
   {Object.entries(languages).map(([code, label]) => (
     <a
       href={code === 'id' ? cleanPath : `/${code}${cleanPath === '/' ? '' : cleanPath}`}
-      class={`text-xs font-bold px-2 py-1 rounded transition-colors ${
+      class={`text-xs font-bold p-2.5 w-10 h-10 flex justify-center items-center rounded-full transition-colors border ${
         lang === code
-          ? 'bg-blue-600 text-white'
-          : 'text-slate-500 hover:text-blue-600 hover:bg-blue-50'
+          ? 'border-white text-white'
+          : 'text-gray-500 border-gray-500 hover:border-white hover:text-white'
       }`}
     >
       {code.toUpperCase()}
