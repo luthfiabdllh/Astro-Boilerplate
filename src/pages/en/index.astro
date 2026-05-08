@@ -1,14 +1,14 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
 import HomeContent from '@/components/HomeContent.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
 
-const localBusinessSchema = {
+const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "VeterinaryCare",
-  "name": "DFreeze Vet Clinic",
-  "image": "https://dfreeze.novarentech.com/og-image.jpg",
-  "@id": "https://dfreeze.novarentech.com",
-  "url": "https://dfreeze.novarentech.com/en",
+  "@type": "Organization",
+  "name": "NovarenTech",
+  "image": "https://novarentech.com/og-image.jpg",
+  "@id": "https://novarentech.com",
+  "url": "https://novarentech.com/en",
   "telephone": "+62211234567",
   "address": {
     "@type": "PostalAddress",
@@ -17,20 +17,14 @@ const localBusinessSchema = {
     "addressRegion": "DKI Jakarta",
     "postalCode": "12345",
     "addressCountry": "ID"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
   }
 };
 ---
 
 <MainLayout
   title="Home"
-  description="DFreeze Vet Clinic – Trusted veterinary clinic for your pet's healthcare. Consultation, vaccination, grooming, and surgery."
-  jsonld={localBusinessSchema}
+  description="NovarenTech – Your trusted digital solution company providing top-notch technology services, web development, and digital transformation."
+  jsonld={organizationSchema}
 >
   <HomeContent />
 </MainLayout>

@@ -1,4 +1,5 @@
 import { navbarTranslations } from '@/components/layout/navbar/navbar';
+import { footerTranslations } from '@/components/layout/footer/footer';
 
 export const languages = {
   id: 'Bahasa Indonesia',
@@ -10,16 +11,12 @@ export const defaultLang = 'id';
 export const ui = {
   id: {
     ...navbarTranslations.id,
-    'footer.description': 'Perawatan kesehatan terbaik untuk hewan peliharaan kesayangan Anda. Dokter berpengalaman, fasilitas modern.',
-    'footer.services': 'Layanan',
-    'footer.contact': 'Kontak',
-    'footer.rights': 'Hak cipta dilindungi.',
-    'footer.made_with': 'Dibuat dengan ❤️ untuk hewan peliharaan Anda',
+    ...footerTranslations.id,
     'home.hero_badge': 'Dokter Hewan Berpengalaman 24/7',
     'home.hero_title_1': 'Kesehatan Optimal untuk',
     'home.hero_title_highlight': 'Hewan Peliharaan',
     'home.hero_title_2': 'Anda',
-    'home.hero_description': 'DFreeze Vet Clinic hadir dengan tim dokter hewan profesional, peralatan medis modern, dan pelayanan penuh kasih untuk memastikan sahabat berbulu Anda selalu sehat dan bahagia.',
+    'home.hero_description': 'NovarenTech hadir dengan tim profesional, teknologi modern, dan solusi inovatif untuk memastikan bisnis digital Anda selalu berkembang dan sukses.',
     'home.cta_articles': 'Baca Artikel Kesehatan',
     'home.stats_patients': 'Pasien Ditangani',
     'home.stats_experience': 'Tahun Pengalaman',
@@ -65,16 +62,12 @@ export const ui = {
   },
   en: {
     ...navbarTranslations.en,
-    'footer.description': 'Best healthcare for your beloved pets. Experienced doctors, modern facilities.',
-    'footer.services': 'Services',
-    'footer.contact': 'Contact',
-    'footer.rights': 'All rights reserved.',
-    'footer.made_with': 'Made with ❤️ for your pets',
+    ...footerTranslations.en,
     'home.hero_badge': 'Experienced Veterinarians 24/7',
     'home.hero_title_1': 'Optimal Health for',
     'home.hero_title_highlight': 'Your Pets',
     'home.hero_title_2': '',
-    'home.hero_description': 'DFreeze Vet Clinic comes with a professional veterinary team, modern medical equipment, and compassionate service to ensure your furry friends are always healthy and happy.',
+    'home.hero_description': 'NovarenTech comes with a professional team, modern technology, and innovative solutions to ensure your digital business is always growing and successful.',
     'home.cta_articles': 'Read Health Articles',
     'home.stats_patients': 'Patients Handled',
     'home.stats_experience': 'Years Experience',

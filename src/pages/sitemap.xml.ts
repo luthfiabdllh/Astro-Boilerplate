@@ -5,7 +5,7 @@ export const GET: APIRoute = async ({ site }) => {
   const articles = await getArticles();
   
   // Ambil URL utama dari asto.config.mjs
-  const siteUrl = site ? new URL(site).origin : 'https://dfreeze.novarentech.com';
+  const siteUrl = site ? new URL(site).origin : 'https://novarentech.com';
 
   const defaultPages = [
     '', // Beranda

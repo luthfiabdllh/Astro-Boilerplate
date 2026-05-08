@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = "DFreeze Vet Clinic",
-  description = "Klinik hewan terpercaya untuk sahabat berbulu Anda. Perawatan terbaik, fasilitas modern, dan dokter hewan berpengalaman.",
+  title = "NovarenTech",
+  description = "NovarenTech – Your trusted digital solution company providing top-notch technology services, web development, and digital transformation.",
   image = "/og-image.jpg",
   type = "website",
   canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href,
@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 // Format title properly
-const siteTitle = title === "DFreeze Vet Clinic" ? title : `${title} | DFreeze Vet Clinic`;
+const siteTitle = title === "NovarenTech" ? title : `${title} | NovarenTech`;
 
 // Resolve image URL
 const ogImage = new URL(image, Astro.site ?? Astro.url.origin).href;
@@ -45,7 +45,7 @@ const ogImage = new URL(image, Astro.site ?? Astro.url.origin).href;
 <meta property="og:title" content={siteTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="DFreeze Vet Clinic" />
+<meta property="og:site_name" content="NovarenTech" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
