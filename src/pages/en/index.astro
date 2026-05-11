@@ -1,6 +1,7 @@
 ---
-import HomeContent from '@/components/HomeContent.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import IntermittentHero from '@/components/IntermittentHero.astro';
+import IntermittentFooter from '@/components/layout/footer/IntermittentFooter.astro';
+import Layout from '@/layouts/Layout.astro';
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -21,10 +22,11 @@ const organizationSchema = {
 };
 ---
 
-<MainLayout
+<Layout
   title="Home"
   description="NovarenTech – Your trusted digital solution company providing top-notch technology services, web development, and digital transformation."
   jsonld={organizationSchema}
 >
-  <HomeContent />
-</MainLayout>
+  <IntermittentHero />
+  <IntermittentFooter />
+</Layout>

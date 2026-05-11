@@ -1,0 +1,46 @@
+---
+import { NavBar } from "@/components/ui/tube-light-navbar"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+import LanguagePicker from '@/components/LanguagePicker.astro'
+import { Image } from 'astro:assets';
+import logo from '@/assets/logo.png';
+import { getNavItems } from './navbar';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const navItems = getNavItems(t, lang);
+---
+
+<!-- Top Bar (Logo & Utils) -->
+<header class="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 sm:h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a 
+                href={getNavItems(t, lang)[0].url} 
+                class="flex items-center group pointer-events-auto transition-transform hover:scale-105 active:scale-95" 
+                id="nav-logo"
+            >
+                <div class="h-6 sm:h-8 flex items-center">
+                    <Image
+                        src={logo}
+                        alt="Novaren Logo"
+                        height={32}
+                        class="w-auto h-full object-contain"
+                    />
+                </div>
+            </a>
+
+            <!-- Utilities (Lang & CTA) -->
+            <div class="flex items-center gap-3 sm:gap-6 pointer-events-auto">
+                <a 
+                    href={getNavItems(t, lang)[4].url}
+                    class="bg-white text-primary px-5 py-2.5 rounded-2xl shadow-lg shadow-white/20 hover:bg-blue-100 hover:shadow-white/40 transition-all font-semibold text-sm active:scale-95 "
+                >
+                    {t('nav.IntermittentCta')}
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

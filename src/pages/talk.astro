@@ -1,0 +1,15 @@
+---
+import TalkContent from '@/components/TalkContent.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+  title="Talk"
+  description="Let's build something that works. No pressure, just a conversation."
+>
+  <TalkContent />
+</Layout>

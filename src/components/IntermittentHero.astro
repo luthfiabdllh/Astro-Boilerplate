@@ -1,0 +1,44 @@
+---
+import heroVideo from '@/assets/hero/hero.webm';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="relative w-full h-screen min-h-[600px] overflow-hidden bg-black">
+  <!-- Video Background -->
+  <video 
+    src={heroVideo} 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    class="absolute inset-0 w-full h-full object-cover"
+  ></video>
+  
+  <!-- Optional Overlay for better text readability -->
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <!-- Content Container -->
+  <div class="relative z-10 w-full h-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between pt-32 pb-16 md:pb-24">
+    
+    <!-- Middle Right text -->
+    <div class="grow flex items-center justify-end">
+      <div class="max-w-xs md:max-w-sm lg:max-w-md text-white">
+        <p class="text-base md:text-lg lg:text-xl font-light leading-relaxed">
+          {t('hero_intermittent.desc')}
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Left text -->
+    <div class="mt-auto">
+      <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold text-white tracking-wide leading-tight">
+        {t('hero_intermittent.title1')}<br/>
+        {t('hero_intermittent.title2')}
+      </h1>
+    </div>
+
+  </div>
+</section>
